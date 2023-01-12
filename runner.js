@@ -13,7 +13,11 @@
         script: path.join(__dirname, '/app.js'),
         output: path.join(__dirname, '/logs/output.log'),
         error: path.join(__dirname, '/logs/output.log'),
-        mergeLogs: true
+        increment_var: 'PORT',
+        mergeLogs: true,
+        env_production: {
+        "PORT":8120,
+        },
       },
       function (err) {
         if (err) {
