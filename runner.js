@@ -15,7 +15,7 @@
         error: path.join(__dirname, '/logs/output.log'),
         increment_var: 'PORT',
         mergeLogs: true,
-        env_production: {
+        env: {
         "PORT":8120,
         },
       },
