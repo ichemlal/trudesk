@@ -16,7 +16,7 @@
         increment_var: 'PORT',
         mergeLogs: true,
         env:{
-          port:process.argv[2],
+          PORT:process.argv[2],
         },
     
       },
