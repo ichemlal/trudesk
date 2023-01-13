@@ -16,7 +16,7 @@
         increment_var: 'PORT',
         mergeLogs: true,
         env:{
-          port=8118,
+          port:8118,
         },
     
       },
