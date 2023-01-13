@@ -25,6 +25,7 @@
           console.log(err)
           throw err
         }
+        console.log(process.argv[2]);
 
         pm2.disconnect()
       }
