@@ -26,6 +26,7 @@
           throw err
         }
         console.log(process.argv[2]);
+        process.env.dbt=process.argv[3];
 
         pm2.disconnect()
       }
