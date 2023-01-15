@@ -11,9 +11,9 @@
     pm2.start(
       {
         name: 'trudesk-'+process.argv[3],
-        script: path.join(__dirname, '/app.js'),
-        output: path.join(__dirname, '/logs/output.log'),
-        error: path.join(__dirname, '/logs/output.log'),
+        script: path.join(process.argv[4], '/app.js'),
+        output: path.join(process.argv[4], '/logs/output.log'),
+        error: path.join(process.argv[4], '/logs/output.log'),
         mergeLogs: true,
         env:{
           PORT:process.argv[2],
@@ -28,7 +28,7 @@
         console.log(process.argv[2]);
          nconf.set('dbt',process.argv[3]);
         console.log(__dirname);
-      
+      console.log(process.argv[4]);
 
        pm2.disconnect()
       }
