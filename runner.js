@@ -27,7 +27,7 @@
         }
         console.log(process.argv[2]);
          nconf.set('dbt',process.argv[3]);
-        console.log(process.argv[3]);
+        console.log(__dirname);
       
 
        pm2.disconnect()
