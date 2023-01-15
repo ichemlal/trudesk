@@ -3,6 +3,7 @@
 
   var pm2 = require('pm2')
   var path = require('path')
+  var nconf = require('nconf')
 
   pm2.connect(true, function (err) {
     if (err) throw err
@@ -25,8 +26,9 @@
           throw err
         }
         console.log(process.argv[2]);
+         nconf.set('dbt',process.argv[3]);
         console.log(process.argv[3]);
-        process.env.dbt=process.argv[3];
+      
 
        pm2.disconnect()
       }
