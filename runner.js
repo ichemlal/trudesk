@@ -28,7 +28,7 @@
         console.log(process.argv[3]);
         process.env.dbt=process.argv[3];
 
-       
+       pm2.disconnect()
       }
     )
   })
