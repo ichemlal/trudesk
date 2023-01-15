@@ -18,6 +18,7 @@ const _ = require('lodash')
 const winston = require('../logger')
 const pkg = require('../../package')
 const Chance = require('chance')
+var nconf = require('nconf')
 
 const installController = {}
 installController.content = {}
@@ -26,7 +27,7 @@ installController.index = function (req, res) {
   const content = {}
   content.title = 'Install Trudesk'
   content.layout = false
- content.bdt = process.env.dbt
+ content.bdt = ncon.get('dbt')
   content.bottom = 'Trudesk v' + pkg.version
   content.isDocker = process.env.TRUDESK_DOCKER || false
 
