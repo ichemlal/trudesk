@@ -21,6 +21,7 @@
           USERN:process.argv[6],
           PASS:process.argv[7],
           DBase:'tenant-'+process.argv[3],
+          FULLN:'tenant-'+process.argv[8],
           
         },
     
