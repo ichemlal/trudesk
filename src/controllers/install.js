@@ -452,7 +452,7 @@ installController.restart = function (req, res) {
       res.status(400).send(err)
       return
     }
-    pm2.restart('trudesk', function (err) {
+    pm2.restart(process.env.INST, function (err) {
       if (err) {
         res.status(400).send(err)
         return winston.error(err)
