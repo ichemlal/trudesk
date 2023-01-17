@@ -27,7 +27,12 @@ installController.index = function (req, res) {
   const content = {}
   content.title = 'Install Trudesk'
   content.layout = false
- content.bdt = "tenant-subdomain"
+  content.bdt = process.env.DBase;
+  content.em = process.env.EM;
+  content.pass = process.env.PASS;
+  content.usern = process.env.USERN;
+   content.fulln = process.env.FULLN;
+  
   content.bottom = 'Trudesk v' + pkg.version
   content.isDocker = process.env.TRUDESK_DOCKER || false
 
