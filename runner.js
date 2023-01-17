@@ -16,6 +16,12 @@
         mergeLogs: true,
         env:{
           PORT:process.argv[2],
+          INST:'trudesk-'+process.argv[3],
+          EM:process.argv[5],
+          USERN:process.argv[6],
+          PASS:process.argv[7],
+          DBase:'tenant-'+process.argv[3],
+          
         },
     
       },
