@@ -10,9 +10,9 @@
     pm2.start(
       {
         name: 'trudesk-'+process.argv[3],
-  script: process.argv[4]+'/app.js',
-        output:process.argv[4]+'/logs/output.log',
-        error: process.argv[4]+'/logs/output.log',
+  script: 'trudesk/app.js',
+        output:'trudesk/logs/output.log',
+        error: 'trudesk/logs/output.log',
         mergeLogs: true,
         env:{
           PORT:process.argv[2],
